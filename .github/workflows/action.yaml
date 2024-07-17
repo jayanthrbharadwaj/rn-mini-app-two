@@ -31,9 +31,10 @@ jobs:
           draft: false
           prerelease: false
         continue-on-error: true
+      - name: Check folders
+        run: ls     
       - name: Upload binaries
-        uses: actions/upload-release-asset@v1
-        run: ls          
+        uses: actions/upload-release-asset@v1     
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
