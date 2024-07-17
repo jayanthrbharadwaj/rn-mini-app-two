@@ -107,7 +107,7 @@ const App: React.FC<Props> = ({ navigation, route }) => {
             onPress={takePermissions}
             activeOpacity={0.5}
             style={styles.itemContainer}>
-            <Text style={styles.itemText}>{"QR Code scanner"}</Text>
+            <Text style={styles.itemText}>{"QR Code scanner button"}</Text>
           </TouchableOpacity>
           {cameraShown && (
             <CameraScanner
