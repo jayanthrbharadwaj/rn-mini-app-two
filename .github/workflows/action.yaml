@@ -14,6 +14,7 @@ jobs:
       - name: Build binaries
         run: |
           npm install -g react-native
+          yarn install
           yarn bundle
 
       - name: Create release
