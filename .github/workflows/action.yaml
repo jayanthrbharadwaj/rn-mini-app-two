@@ -33,10 +33,11 @@ jobs:
         continue-on-error: true
       - name: Upload binaries
         uses: actions/upload-release-asset@v1
+        run: ls          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./build/generated/android/
+          asset_path: build/generated/android/
           asset_name: js.bundle
           asset_content_type: application/js
