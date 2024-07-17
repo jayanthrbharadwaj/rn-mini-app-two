@@ -46,6 +46,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
           files: "build/generated/android/*"
+          release-tag: v1.0.0
           repo-token: ${{ secrets.GITHUB_TOKEN }}
