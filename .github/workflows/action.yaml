@@ -13,8 +13,7 @@ jobs:
 
       - name: Build binaries
         run: |
-          # Your build commands here
-          # For example, compiling binaries or packaging artifacts
+          yarn bundle
 
       - name: Create release
         id: create_release
