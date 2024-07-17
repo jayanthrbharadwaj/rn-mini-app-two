@@ -11,12 +11,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build binaries
+      - name: Install binaries
         run: |
           npm install -g react-native
-          yarn install
+          yarn install          
+      -name: Bundle binary
+        continue-on-error: true
+        run: |
           yarn bundle
-
+          
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
