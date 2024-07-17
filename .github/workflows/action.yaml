@@ -15,9 +15,8 @@ jobs:
         run: |
           npm install -g react-native
           yarn install          
-      -name: Bundle binary        
-        run: |
-          yarn bundle
+      - name: Bundle binary        
+        run: yarn bundle          
         continue-on-error: true
       - name: Create release
         id: create_release
