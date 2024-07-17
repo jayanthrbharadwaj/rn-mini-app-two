@@ -32,7 +32,15 @@ jobs:
           prerelease: false
         continue-on-error: true
       - name: Check folders
-        run: ls     
+        run: |
+          ls
+          cd build
+          ls
+          cd generated
+          ls
+          cd android
+          ls
+        
       - name: Upload binaries
         uses: actions/upload-release-asset@v1     
         env:
