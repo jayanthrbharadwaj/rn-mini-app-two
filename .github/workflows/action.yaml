@@ -13,6 +13,7 @@ jobs:
 
       - name: Build binaries
         run: |
+          npm install -g react-native
           yarn bundle
 
       - name: Create release
