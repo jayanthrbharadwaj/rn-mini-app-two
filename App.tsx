@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 17,
-    color: 'black',
+    color: 'blue',
   },
 });
 
